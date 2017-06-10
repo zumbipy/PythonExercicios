@@ -25,3 +25,5 @@ while habitantes_a <= habitantes_b:
     habitantes_a, habitantes_b = habitantes_a + crescimento_p_a, habitantes_b + crescimento_p_b
 
 print("Vai leva {} anos.".format(anos))
+
+impr
