@@ -20,12 +20,10 @@ for i in vetor_letras:
     # Verifica se a letra não é vogal e add a lista.
     if i not in vetor_vogais:
         vetor_consoantes.append(i)
-    print(i, end=" ")
+    print(i, end="")
 
 print("\n" * 2)
 
 print("Lista da Consoantes:")
 for letra in vetor_consoantes:
-    print(letra, end=" ")
-
-print("\n")
+    print(letra, end="")
