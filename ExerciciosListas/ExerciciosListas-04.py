@@ -22,8 +22,10 @@ for i in vetor_letras:
         vetor_consoantes.append(i)
     print(i, end="")
 
-print("\n" * 2)
+print()
+print()
 
 print("Lista da Consoantes:")
 for letra in vetor_consoantes:
     print(letra, end="")
+print()

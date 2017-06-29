@@ -1,11 +1,11 @@
-# author: ZumbiPy
-# E-mail: zumbipy@gmail.com
-# Exercicio do site http://wiki.python.org.br/EstruturaSequencial
-"""
-26 - Numa eleição existem três candidatos. Faça um programa que peça
-o número total de eleitores. Peça para cada eleitor votar e ao final
-mostrar o número de votos de cada candidato.
-"""
+# # author: ZumbiPy
+# # E-mail: zumbipy@gmail.com
+# # Exercicio do site http://wiki.python.org.br/EstruturaSequencial
+# """
+# 26 - Numa eleição existem três candidatos. Faça um programa que peça
+# o número total de eleitores. Peça para cada eleitor votar e ao final
+# mostrar o número de votos de cada candidato.
+# """
 # ================================================================================
 #                              Variaveis.
 # ================================================================================
