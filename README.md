@@ -1,9 +1,9 @@
-# **Python Exercicios**
+# **Python Exercícios**
 > Treinando Algoritmo e Lógica de Programação com os exercícios disponíveis em: https://wiki.python.org.br/ListaDeExercicios
 
 #### Lista de exercícios:
 
- Nome  das listas  | Total de Exercicios
+ Nome  das listas  | Total de Exercícios
 ----------------------------|:----------------:
 **Estrutura Sequencial**        | 17 / 28
 **Estrutura De Decisao**        |  27 / 28
