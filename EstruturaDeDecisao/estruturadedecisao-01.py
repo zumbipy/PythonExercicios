@@ -10,7 +10,6 @@
 #                           Variáveis do programa
 # ================================================================================
 # Entrada de Dados.
-
 numero0 = int(input("Digite um numero: "))
 numero1 = int(input("Digiete outro numero: "))
 
