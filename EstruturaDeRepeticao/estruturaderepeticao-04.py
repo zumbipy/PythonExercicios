@@ -1,6 +1,8 @@
-# author: ZumbiPy
-# E-mail: zumbipy@gmail.com
-# Exercicio do site http://wiki.python.org.br/EstruturaDeRepeticao
+# Telegram: @ZumbiPy __   _ ___
+#  /_  / __ ____ _  / /  (_) _ \__ __
+#   / /_/ // /  ' \/ _ \/ / ___/ // /
+#  /___/\_,_/_/_/_/_.__/_/_/   \_, /
+# E-mail: zumbipy@gmail.com   /___/
 """
 4 - Supondo que a população de um país A seja da ordem de 80000 habitantes
 com uma taxa anual de crescimento de 3% e que a população de B seja 200000

@@ -1,8 +1,8 @@
-# author: ZumbiPy
-# E-mail: zumbipy@gmail.com
-# Exercicio do site http://wiki.python.org.br/EstruturaDeDecisao
-# Para execurta o programa on line entra no link a baixo:
-# https://repl.it/I24V/0
+# Telegram: @ZumbiPy __   _ ___
+#  /_  / __ ____ _  / /  (_) _ \__ __
+#   / /_/ // /  ' \/ _ \/ / ___/ // /
+#  /___/\_,_/_/_/_/_.__/_/_/   \_, /
+# E-mail: zumbipy@gmail.com   /___/
 """
 24 - Faça um Programa que leia 2 números e em seguida pergunte ao usuário
 qual operação ele deseja realizar. O resultado da operação deve ser

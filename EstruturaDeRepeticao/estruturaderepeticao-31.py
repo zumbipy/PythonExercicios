@@ -1,6 +1,8 @@
-# author: ZumbiPy
-# E-mail: zumbipy@gmail.com
-# Exercicio do site http://wiki.python.org.br/EstruturaDeRepeticao
+# Telegram: @ZumbiPy __   _ ___
+#  /_  / __ ____ _  / /  (_) _ \__ __
+#   / /_/ // /  ' \/ _ \/ / ___/ // /
+#  /___/\_,_/_/_/_/_.__/_/_/   \_, /
+# E-mail: zumbipy@gmail.com   /___/
 """
 31 - O Sr. Manoel Joaquim expandiu seus negócios para além dos negócios
 de 1,99 e agora possui uma loja de conveniências. Faça um programa que
@@ -26,7 +28,7 @@ while True:
     troco = 0
     contador_produto = 0
     pagamento = 0
-    print("Lojas Tabajara")
+    print("Lojas Tabajara\nDigitre 0 para finalizar!\n")
     while True:
         contador_produto += 1
         produto_valor = float(input("Produto{:>2}: R$ ".format(

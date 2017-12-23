@@ -1,6 +1,8 @@
-# author: ZumbiPy
-# E-mail: zumbipy@gmail.com
-# Exercicio do site http://wiki.python.org.br/EstruturaDeRepeticao
+# Telegram: @ZumbiPy __   _ ___
+#  /_  / __ ____ _  / /  (_) _ \__ __
+#   / /_/ // /  ' \/ _ \/ / ___/ // /
+#  /___/\_,_/_/_/_/_.__/_/_/   \_, /
+# E-mail: zumbipy@gmail.com   /___/
 """
 21 - Faça um programa que peça um número inteiro e determine se ele
 é ou não um número primo. Um número primo é aquele que é divisível

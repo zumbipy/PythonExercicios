@@ -1,8 +1,8 @@
-# author: ZumbiPy
-# E-mail: zumbipy@gmail.com
-# Exercicio do site http://wiki.python.org.br/EstruturaDeDecisao
-# Para execurta o programa on line entra no link a baixo:
-# https://repl.it/I29b/0
+# Telegram: @ZumbiPy __   _ ___
+#  /_  / __ ____ _  / /  (_) _ \__ __
+#   / /_/ // /  ' \/ _ \/ / ___/ // /
+#  /___/\_,_/_/_/_/_.__/_/_/   \_, /
+# E-mail: zumbipy@gmail.com   /___/
 """
 28 - O Hipermercado Tabajara está com uma promoção de carnes que é imperdível.
 

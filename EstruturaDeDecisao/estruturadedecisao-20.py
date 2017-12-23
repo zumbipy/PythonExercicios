@@ -1,8 +1,8 @@
-# author: ZumbiPy
-# E-mail: zumbipy@gmail.com
-# Exercicio do site http://wiki.python.org.br/EstruturaDeDecisao
-# Para execurta o programa on line entra no link a baixo:
-# https://repl.it/I207/1
+# Telegram: @ZumbiPy __   _ ___
+#  /_  / __ ____ _  / /  (_) _ \__ __
+#   / /_/ // /  ' \/ _ \/ / ___/ // /
+#  /___/\_,_/_/_/_/_.__/_/_/   \_, /
+# E-mail: zumbipy@gmail.com   /___/
 """
 20 - Faça um Programa para leitura de três notas parciais de um aluno.
 O programa deve calcular a média alcançada por aluno e presentar:

@@ -1,8 +1,8 @@
-# author: ZumbiPy
-# E-mail: zumbipy@gmail.com
-# Exercicio do site http://wiki.python.org.br/EstruturaDeDecisao
-# Para execurta o programa on line entra no link a baixo:
-# https://repl.it/I2Ds/1
+# Telegram: @ZumbiPy __   _ ___
+#  /_  / __ ____ _  / /  (_) _ \__ __
+#   / /_/ // /  ' \/ _ \/ / ___/ // /
+#  /___/\_,_/_/_/_/_.__/_/_/   \_, /
+# E-mail: zumbipy@gmail.com   /___/
 """
 11 - As Organizações Tabajara resolveram dar um aumento de salário aos
 seus colaboradores e lhe contraram para desenvolver o programa que
