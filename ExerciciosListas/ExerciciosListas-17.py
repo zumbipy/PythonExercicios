@@ -1,6 +1,8 @@
-# author: ZumbiPy
-# E-mail: zumbipy@gmail.com
-# Exercicio do site http://wiki.python.org.br/EstruturaLista
+# Telegram: @ZumbiPy __   _ ___
+#  /_  / __ ____ _  / /  (_) _ \__ __
+#   / /_/ // /  ' \/ _ \/ / ___/ // /
+#  /___/\_,_/_/_/_/_.__/_/_/   \_, /
+# E-mail: zumbipy@gmail.com   /___/
 """
 17 -Em uma competição de salto em distância cada atleta tem direito a
 cinco saltos. O resultado do atleta será determinado pela média dos
@@ -10,7 +12,6 @@ informe o nome, os saltos e a média dos saltos. O programa deve ser
 encerrado quando não for informado o nome do atleta. A saída do programa
 deve ser conforme o exemplo abaixo:
 Atleta: Rodrigo Curvêllo
- 
 Primeiro Salto: 6.5 m
 Segundo Salto: 6.1 m
 Terceiro Salto: 6.2 m

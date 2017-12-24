@@ -1,6 +1,8 @@
-
-# author: ZumbiPy
-# E-mail: zumbipy@gmail.com
+# Telegram: @ZumbiPy __   _ ___
+#  /_  / __ ____ _  / /  (_) _ \__ __
+#   / /_/ // /  ' \/ _ \/ / ___/ // /
+#  /___/\_,_/_/_/_/_.__/_/_/   \_, /
+# E-mail: zumbipy@gmail.com   /___/
 # Exercicio do site http://wiki.python.org.br/EstruturaLista
 """
 14 - Utilizando listas faça um programa que faça 5 perguntas para uma pessoa sobre um crime.

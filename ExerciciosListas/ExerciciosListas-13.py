@@ -1,6 +1,8 @@
-# author: ZumbiPy
-# E-mail: zumbipy@gmail.com
-# Exercicio do site http://wiki.python.org.br/EstruturaLista
+# Telegram: @ZumbiPy __   _ ___
+#  /_  / __ ____ _  / /  (_) _ \__ __
+#   / /_/ // /  ' \/ _ \/ / ___/ // /
+#  /___/\_,_/_/_/_/_.__/_/_/   \_, /
+# E-mail: zumbipy@gmail.com   /___/
 """
 13 - Faça um programa que receba a temperatura média de cada mês do ano
 e armazene-as em uma lista. Após isto, calcule a média anual das
@@ -9,7 +11,9 @@ que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 –
 Fevereiro, . . . ).
 """
 temperaturas_media_mes = []
-mes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+mes = ['Janeiro', 'Fevereiro', 'Março', 'Abril',
+       'Maio', 'Junho', 'Julho', 'Agosto',
+       'Setembro', 'Outubro', 'Novembro', 'Dezembro']
 item = 0
 media = 0
 soma = 0
