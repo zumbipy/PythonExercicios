@@ -1,7 +1,8 @@
-#!/usr/bin/env python3
-# author: ZumbiPy
-# E-mail: zumbipy@gmail.com
-# Exercicio do site http://wiki.python.org.br/EstruturaSequencial
+# Telegram: @ZumbiPy __   _ ___
+#  /_  / __ ____ _  / /  (_) _ \__ __
+#   / /_/ // /  ' \/ _ \/ / ___/ // /
+#  /___/\_,_/_/_/_/_.__/_/_/   \_, /
+# E-mail: zumbipy@gmail.com   /___/
 """
 16 - Faça um programa para uma loja de tintas. O programa deverá pedir
 o tamanho em metros quadrados da área a ser pintada. Considere que a

@@ -1,10 +1,13 @@
-# author: ZumbiPy
-# E-mail: zumbipy@gmail.com
-# Exercicio do site http://wiki.python.org.br/EstruturaSequencial
+# Telegram: @ZumbiPy __   _ ___
+#  /_  / __ ____ _  / /  (_) _ \__ __
+#   / /_/ // /  ' \/ _ \/ / ___/ // /
+#  /___/\_,_/_/_/_/_.__/_/_/   \_, /
+# E-mail: zumbipy@gmail.com   /___/
 """
 9 - Faça um Programa que peça a temperatura em graus Farenheit,
 transforme e mostre a temperatura em graus Celsius.
-C = (5 * (F-32) / 9)."""
+C = (5 * (F-32) / 9).
+"""
 
 temp_graus = int(input("Digite a temperuda em \"Graus Farenheit\" (°F): "))
 
