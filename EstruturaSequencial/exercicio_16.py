@@ -10,11 +10,7 @@ cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta
 é vendida em latas de 18 litros, que custam R$ 80,00. Informe ao usuário
 a quantidades de latas de tinta a serem compradas e o preço total.
 """
-
-print("casakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk  kkk")
-
-
-
-
-
-
+metros_quadrados = int(input("Quantos metros quadrados você quer compra: "))
+total_litros = metros_quadrados * 3
+total_latas = total_litros / 18
+print(total_latas)
