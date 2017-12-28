@@ -7,7 +7,7 @@
 ----------------------------|:----------------:
 **Estrutura Sequencial**        | 17 / 28
 **Estrutura De Decisao**        |  27 / 28
-**Estrutura De Repeticao**      |  27 / 51
+**Estrutura De Repeticao**      |  33 / 51
 **Exercicios Listas**           |  14 / 24
 Exercicios Funcoes          | 0 / 14
 Exercicios Com Strings       |  0 / 14

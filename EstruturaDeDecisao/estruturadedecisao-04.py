@@ -25,3 +25,10 @@ elif letra_digitada == "u":
     print("esta letra e uma vogal")
 else:
     print("esta letra e uma consoante")
+
+# ou
+print("")
+if letra_digitada in ["a", 'e', 'i', 'o', "u"]:
+    print(f"A letra [{letra_digitada}] é uma Vogal.")
+else:
+    print(f"letra [{letra_digitada}] é uma Consoante.")

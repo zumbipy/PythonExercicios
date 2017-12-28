@@ -11,5 +11,3 @@ if numero0 > numero1:
     print("O numero {} e maior que o {}".format(numero0, numero1))
 else:
     print("O numero {} e maior que o {}".format(numero1, numero0))
-
-
