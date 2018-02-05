@@ -25,13 +25,10 @@ dic_candidatos = {
     2: {"canditado": "maria", "voto": 0},
     3: {"canditado": "josé", "voto": 0},
     4: {"canditado": "nego ban", "voto": 0},
-    5: {"canditado": "Nulo", "voto": 0},
-    6: {"canditado": "Branco", "voto": 0}
+    5: {"canditado": "Voto Nulo", "voto": 0},
+    6: {"canditado": "Voto Branco", "voto": 0}
 
 }
-total_votos = 0
-votos_nulos = 0
-votos_em_branco = 0
 
 
 def tabela_eleicao(dic):
@@ -42,22 +39,49 @@ def tabela_eleicao(dic):
     for codigo in dic.keys():
         votos = dic[codigo]['voto']
         candidato = dic[codigo]['canditado']
-        print(f"|{codigo:^5}|{candidato.capitalize():<12}|{votos:>7}|")
+        if codigo == 5:
+            print("+-----+------------+-------+")
+            print(f"|{codigo:^5}|{candidato.capitalize():<12}|{votos:>7}|")
+
+        else:
+            print(f"|{codigo:^5}|{candidato.capitalize():<12}|{votos:>7}|")
     print("+-----+------------+-------+")
 
 
-def votar(total_votos, dic):
+def votar(dic):
     while True:
         codigo_voto = int(input("Para voto digite o codigo do Canditado ou 0 para sair: "))
         if codigo_voto in dic.keys():
             dic[codigo_voto]['voto'] += 1
             print("Voto confirmando")
-            total_votos += 1
-        elif codigo_voto == 0:
+        else:
+            print("Codigo Invalido !!! voto não confirmando!!")
+        if codigo_voto == 0:
             return False
+
+
+def contar_votos(dic_candidatos):
+    total = 0
+    for codigo in dic_candidatos.keys():
+        voto = dic_candidatos[codigo]['voto']
+        total += voto
+    return total
+
+
+def calcular_porcentagem(dic_candidatos):
+    total_votos = contar_votos(dic_candidatos)
+    votos_nulos = dic_candidatos[5]['voto']
+    votos_brancos = dic_candidatos[6]['voto']
+
+    p_votos_nulos = (100 * votos_nulos) / total_votos
+    p_votos_brancos = (100 * votos_brancos) / total_votos
+    print(f"Total de Votos foram: {total_votos}")
+    print(f"Total de votos brancos foi: {p_votos_brancos:.1f}%")
+    print(f"Total de votos nulos foi: {p_votos_nulos:.1f}%")
 
 
 if __name__ == '__main__':
     tabela_eleicao(dic_candidatos)
-    votar(total_votos, dic_candidatos)
+    votar(dic_candidatos)
     tabela_eleicao(dic_candidatos)
+    calcular_porcentagem(dic_candidatos)
