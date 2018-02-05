@@ -4,7 +4,7 @@
 #  /___/\_,_/_/_/_/_.__/_/_/   \_, /
 # E-mail: zumbipy@gmail.com   /___/
 """
-10 - Faça um Programa que peça 2 números inteiros e um número real.
+11 - Faça um Programa que peça 2 números inteiros e um número real.
 Calcule e mostre:
 o produto do dobro do primeiro com metade do segundo .
 a soma do triplo do primeiro com o terceiro.

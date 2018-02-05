@@ -4,7 +4,7 @@
 #  /___/\_,_/_/_/_/_.__/_/_/   \_, /
 # E-mail: zumbipy@gmail.com   /___/
 """
-# 5 - Faça um Programa que converta metros para centímetros.
+5 - Faça um Programa que converta metros para centímetros.
 """
 metros = float(input("Digite quantos metros você quer converter: "))
 

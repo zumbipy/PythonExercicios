@@ -4,7 +4,7 @@
 #  /___/\_,_/_/_/_/_.__/_/_/   \_, /
 # E-mail: zumbipy@gmail.com   /___/
 """
- 8 - Faça um Programa que pergunte quanto você ganha por hora e o número
+8 - Faça um Programa que pergunte quanto você ganha por hora e o número
 de horas trabalhadas no mês. Calcule e mostre o total do seu salário no
 referido mês.
 """
