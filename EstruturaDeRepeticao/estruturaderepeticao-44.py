@@ -60,12 +60,17 @@ def votar(dic):
             return False
 
 
+# def contar_votos(dic_candidatos):
+#     total = 0
+#     for codigo in dic_candidatos.keys():
+#         voto = dic_candidatos[codigo]['voto']
+#         total += voto
+#     return total
+
+# sugestão do @MarcusMann
 def contar_votos(dic_candidatos):
-    total = 0
-    for codigo in dic_candidatos.keys():
-        voto = dic_candidatos[codigo]['voto']
-        total += voto
-    return total
+    contagem = [codigo.get('voto', 0) for codigo in dic_candidatos.values()]
+    return sum(contagem)
 
 
 def calcular_porcentagem(dic_candidatos):
