@@ -61,8 +61,6 @@ def template_texto(texto, dict_diretorios):
 
 
 if __name__ == '__main__':
-    texto = criar_ler_arquivo
-    print
-
+    texto = criar_dict_diretorio("texto_readema.txt", tipo="r")
     dic = criar_dict_diretorio()
     criar_ler_arquivo("README.md", template_texto(texto, dic))
