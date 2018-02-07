@@ -12,9 +12,15 @@ import os.path
 from string import ascii_uppercase
 
 
-def criar_arquivo(nome_arquivo, texto):
-    with open(nome_arquivo, "w") as arquivo:
-        arquivo.write(texto)
+def criar_ler_arquivo(nome_arquivo, texto="", tipo="w"):
+    "criar_ler_arquivo(arquivo, texto="", tipo="")"
+
+    if tipo == "w":
+        with open(nome_arquivo, tipo) as arquivo:
+            arquivo.write(texto)
+    elif tipo == "r":
+        with open(nome_arquivo, tipo) as arquivo:
+            return arquivo.read()
 
 
 def criar_dict_diretorio():
@@ -55,13 +61,8 @@ def template_texto(texto, dict_diretorios):
 
 
 if __name__ == '__main__':
-    texto = """# **Python Exercícios**
-> Treinando Algoritmo e Lógica de Programação com os exercícios disponíveis em: https://wiki.python.org.br/ListaDeExercicios
-
-# Lista de exercícios:
-
- Tipo de exercício | Concluido
-----------------------------|:----------------:\n"""
+    texto = criar_ler_arquivo
+    print
 
     dic = criar_dict_diretorio()
-    criar_arquivo("README.md", template_texto(texto, dic))
+    criar_ler_arquivo("README.md", template_texto(texto, dic))
