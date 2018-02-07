@@ -13,7 +13,7 @@ from string import ascii_uppercase
 
 
 def criar_ler_arquivo(nome_arquivo, texto="", tipo="w"):
-    "criar_ler_arquivo(arquivo, texto="", tipo="")"
+    'criar_ler_arquivo(arquivo, texto="", tipo="")'
 
     if tipo == "w":
         with open(nome_arquivo, tipo) as arquivo:
