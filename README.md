@@ -5,7 +5,7 @@
 
  Tipo de exercício | Concluido
 ----------------------------|:----------------:
-**Estrutura De Decisao** | 27
-**Estrutura De Repeticao** | 38
-**Estrutura Sequencial** | 16
-**Exercicios Listas** | 17
+**Estrutura De Decisao** | **27 \ 28**
+**Estrutura De Repeticao** | **38 \ 51**
+**Estrutura Sequencial** | **16 \ 18**
+**Exercicios Listas** | **17 \ 24**
