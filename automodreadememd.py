@@ -16,10 +16,10 @@ def criar_ler_arquivo(nome_arquivo, texto="", tipo="w"):
     'criar_ler_arquivo(arquivo, texto="", tipo="")'
 
     if tipo == "w":
-        with open(nome_arquivo, tipo) as arquivo:
+        with open(nome_arquivo, tipo, encoding="utf-8") as arquivo:
             arquivo.write(texto)
     elif tipo == "r":
-        with open(nome_arquivo, tipo) as arquivo:
+        with open(nome_arquivo, tipo, encoding="utf-8") as arquivo:
             return arquivo.read()
 
 
@@ -56,11 +56,25 @@ def conta_arquivos(local, tipos=["py"]):
 def template_texto(texto, dict_diretorios):
     saida = texto
     for chave in dict_diretorios:
-        saida += f'**{dict_diretorios[chave]["Nome"]}** | {dict_diretorios[chave]["Total"]}\n'
+        saida += f'**{dict_diretorios[chave]["Nome"]}** | **{dict_diretorios[chave]["Total"]} \ {dict_diretorios[chave]["Falta"]}**\n'
     return saida
 
 
+def mesclar_dic(dic, dict_juntar):
+    for chave in dict_juntar:
+        if chave in dic.keys():
+            dic[chave].update(dict_juntar[chave])
+
+
 if __name__ == '__main__':
+    dict_juntar = {'EstruturaDeDecisao': {"Falta": 28},
+                   'EstruturaDeRepeticao': {"Falta": 51},
+                   'EstruturaSequencial': {"Falta": 18},
+                   'ExerciciosListas': {"Falta": 24},
+                   'nada': {"CAsa": 100}}
+
     texto = criar_ler_arquivo("texto_readema.txt", tipo="r")
     dic = criar_dict_diretorio()
+    mesclar_dic(dic, dict_juntar)
     criar_ler_arquivo("README.md", template_texto(texto, dic))
+    print(criar_ler_arquivo("README.md", "" ,"r"))
