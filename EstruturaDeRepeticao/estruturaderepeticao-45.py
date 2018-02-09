@@ -52,10 +52,8 @@ def maior_menor_acerto(lista_alunos):
     maior, menor = 0, 10
     for aluno in lista_alunos:
         nota = aluno[2]
-        if nota >= maior:
-            maior = nota
-        if nota <= menor:
-            menor = nota
+        maior = nota if nota >= maior else maior
+        menor = nota if nota <= menor else menor
     return maior, menor
 
 

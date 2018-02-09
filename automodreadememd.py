@@ -67,7 +67,7 @@ def mesclar_dic(dic, dict_juntar):
 
 
 def commit():
-    '''So fucionar se não perdir senha ou login'''
+    '''So fucionar se não perdir senha ou login eo mesmo tive cido modificado'''
     os.system("git add README.md")
     os.system("git commit -m 'Update'")
     os.system("git push")
