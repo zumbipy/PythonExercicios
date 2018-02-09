@@ -66,6 +66,13 @@ def mesclar_dic(dic, dict_juntar):
             dic[chave].update(dict_juntar[chave])
 
 
+def commit():
+    '''So fucionar se não perdir senha ou login'''
+    os.system("git add README.md")
+    os.system("git commit -m 'Update'")
+    os.system("git push")
+
+
 if __name__ == '__main__':
     dict_juntar = {'EstruturaDeDecisao': {"Falta": 28},
                    'EstruturaDeRepeticao': {"Falta": 51},
@@ -77,4 +84,5 @@ if __name__ == '__main__':
     dic = criar_dict_diretorio()
     mesclar_dic(dic, dict_juntar)
     criar_ler_arquivo("README.md", template_texto(texto, dic))
-    print(criar_ler_arquivo("README.md", "" ,"r"))
+    print(criar_ler_arquivo("README.md", "", "r"))
+    commit()
