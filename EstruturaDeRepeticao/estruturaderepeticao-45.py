@@ -45,19 +45,14 @@ def corecao(lista_resportas, lista_resportas_aluno):
         nota += 1 if rperguntas == raluno else 0
     return nota
 
-# Maior e Menor Acerto;
-
 
 def maior_menor_acerto(lista_alunos):
-    maior, menor = 0, 10
-    for aluno in lista_alunos:
-        nota = aluno[2]
-        maior = nota if nota >= maior else maior
-        menor = nota if nota <= menor else menor
+    maior = max([nota[2] for nota in lista_alunos])
+    menor = min([nota[2] for nota in lista_alunos])
+
     return maior, menor
 
 
-# A Média das Notas da Turma.
 def media_notas(lista_alunos):
     media_notas = sum([nota[2] for nota in lista_alunos]) / len(lista_alunos)
     return media_notas
