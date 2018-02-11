@@ -84,5 +84,5 @@ if __name__ == '__main__':
     dic = criar_dict_diretorio()
     mesclar_dic(dic, dict_juntar)
     criar_ler_arquivo("README.md", template_texto(texto, dic))
-    print(criar_ler_arquivo("README.md", "", "r"))
+    print(criar_ler_arquivo("README.md", tipo="r"))
     commit()
