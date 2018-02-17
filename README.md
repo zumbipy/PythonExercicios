@@ -6,6 +6,6 @@
  Tipo de exercício | Concluido
 ----------------------------|:----------------:
 **Estrutura De Decisao** | **27 \ 28**
-**Estrutura De Repeticao** | **41 \ 51**
+**Estrutura De Repeticao** | **43 \ 51**
 **Estrutura Sequencial** | **16 \ 18**
 **Exercicios Listas** | **17 \ 24**
