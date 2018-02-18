@@ -56,7 +56,7 @@ def conta_arquivos(local, tipos=["py"]):
 def template_texto(texto, dict_diretorios):
     saida = texto
     for chave in dict_diretorios:
-        saida += f'**{dict_diretorios[chave]["Nome"]}** | **{dict_diretorios[chave]["Total"]} \ {dict_diretorios[chave]["Falta"]}**\n'
+        saida += f'**{dict_diretorios[chave]["Nome"]}** | **{dict_diretorios[chave]["Total"]} \ {dict_diretorios[chave].get("Falta", 0)}**\n'
     return saida
 
 
@@ -78,7 +78,7 @@ if __name__ == '__main__':
                    'EstruturaDeRepeticao': {"Falta": 51},
                    'EstruturaSequencial': {"Falta": 18},
                    'ExerciciosListas': {"Falta": 24},
-                   'nada': {"CAsa": 100}}
+                   }
 
     texto = criar_ler_arquivo("texto_readema.txt", tipo="r")
     dic = criar_dict_diretorio()
