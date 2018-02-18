@@ -38,74 +38,85 @@ O Sistema Operacional mais votado foi o Unix, com 3500 votos, correspondendo a 4
 """
 
 
-def enquete(pergunta, lista_opcoes):
+def criar_enquete(pergunta, lista_opcoes):
     print(f"{pergunta}\n")
     print("As possíveis respostas são:\n")
-    for ordem, opcao in enumerate(lista_opcoes):
-        print(f"{ordem + 1}- {opcao}")
+    for _, titulo, codigo in lista_opcoes:
+        print(f"{codigo}- {titulo}")
+    print()
 
 
-def validar_voto(voto, lista_opcoes):
-    voto = int(voto)
-    opcaoes = convert_lista_numeros(lista_opcoes)
-    return True if voto in opcaoes else False
+def criar_lista(lista_nomes):
+    ''' Recebe uma lista de nome é retorna uma lista com [[voto, nome, codigo], ...]
+    sendo votos igual a 0'''
+
+    lista_saida = []
+    for ordem, nome in enumerate(lista_nomes):
+        lista_saida.append([0, nome, ordem + 1])
+    return lista_saida
 
 
-def conta_votos(lista_votos, lista_opcoes):
-    lista_votos.sort()
-    numeros = convert_lista_numeros(lista_opcoes)
-    return [lista_votos.count(x) for x in numeros]
+def opcao_votar(lista_opcoes):
+    lista_vota = [x[2] for x in lista_opcoes]
+    return lista_vota
 
 
-def convert_lista_numeros(lista):
-    lista_numero = [x + 1 for x in range(len(lista))]
-    return lista_numero
+def validar_votos(voto, lista_opcoes):
+    if voto in opcao_votar(lista_opcoes):
+        return True
+    else:
+        print("Valor Invalido!!!")
+        return False
 
 
-def percentual(lista_votos):
-    lista_porcetual = []
-    total_votos = sum(lista_votos)
-    for voto in lista_votos:
-        porcetual = (100 * voto) / total_votos
-        lista_porcetual.append([voto, porcetual])
-    return lista_porcetual
+def total_votos(lista_opcoes):
+    return sum([x[0] for x in lista_opcoes])
 
 
-def imprimir_resultado(lista_porcetual, lista_opcoes, total_votos):
+def porcentage(lista_opcoes):
+    t_votos = total_votos(lista_opcoes)
+    lista_porcentage = []
+    for voto, titulo, codigo in lista_opcoes:
+        try:
+            porcentage = (100 * voto) / t_votos
+            lista_porcentage.append([voto, titulo, codigo, porcentage])
+        except Exception as e:
+            pass
+    return lista_porcentage
+
+
+def imprimir_resultado(lista_opcoes):
     print(f'''Sistema Operacional     Votos   %
 -------------------     -----   ---''')
-    for (votos, porcetual), OS in zip(lista_porcetual, lista_opcoes):
-        print(f'{OS:<25}{votos:<6.0f}{porcetual:>3.0f}%')
-    lista_porcetual.sort()
+    for voto, titulo, codigo, porcentage in lista_opcoes:
+        print(f'{titulo:<25}{voto:<6.0f}{porcentage:>3.0f}%')
+    if lista_opcoes:
+        voto, titulo, codigo, porcentage = max(lista_opcoes)
+    else:
+        voto, titulo, codigo, porcentage = 0, 0, 0, 0
     print(f'''-------------------     -----
-Total                    {total_votos:<7.0f}
+Total                    {total_votos(lista_opcoes):<7.0f}
 
-
-O Sistema Operacional mais votado tem {lista_porcetual[-1][0]} votos, correspondendo a {lista_porcetual[-1][1]:.0f}% dos voto''')
+O Sistema Operacional mais votado foi o {titulo}, com {voto} votos, correspondendo a {porcentage:.0f}% dos votos.''')
 
 
 if __name__ == '__main__':
 
     pergunta = "Qual o melhor Sistema Operacional para uso em servidores?"
-    lista_opcoes = ('Windows Server', 'Unix', 'Linux', 'Netware', 'Mac OS', 'Outro')
-    lista_votos = []
+    lista_opcoes = criar_lista(('Windows Server', 'Unix', 'Linux', 'Netware', 'Mac OS', 'Outro'))
+    criar_enquete(pergunta, lista_opcoes)
 
-    enquete(pergunta, lista_opcoes)
     while True:
         try:
-            voto = int(input("Digite o numero do OS que deseja vota: "))
-        except Exception as erro:
-            print("Digite apenas valores inteiros positivos")
+            vota = int(input("Digite o codigo que deseja vota: "))
+        except Exception as e:
+            print("Codigo Invalido!!!")
             continue
-
-        if voto == 0:
+        if vota == 0:
+            print()
             break
-        if validar_voto(voto, lista_opcoes):
-            lista_votos.append(voto)
-        else:
-            print("Valor invalido!!!")
+        if validar_votos(vota, lista_opcoes):
+            lista_opcoes[vota - 1][0] += 1
 
-    lista_votos = conta_votos(lista_votos, lista_opcoes)
-    total_votos = sum(lista_votos)
-
-    imprimir_resultado(percentual(lista_votos), lista_opcoes, total_votos)
+    lista_opcoes = porcentage(lista_opcoes)
+    imprimir_resultado(lista_opcoes)
