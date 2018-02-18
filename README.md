@@ -8,4 +8,4 @@
 **Estrutura De Decisao** | **27 \ 28**
 **Estrutura De Repeticao** | **44 \ 51**
 **Estrutura Sequencial** | **16 \ 18**
-**Exercicios Listas** | **17 \ 24**
+**Exercicios Listas** | **18 \ 24**
