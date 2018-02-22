@@ -4,7 +4,7 @@
 #  /___/\_,_/_/_/_/_.__/_/_/   \_, /
 # E-mail: zumbipy@gmail.com   /___//dev - 17/02/2018
 """
-Uma empresa de pesquisas precisa tabular os resultados da seguinte enquete feita a um grande
+19 - Uma empresa de pesquisas precisa tabular os resultados da seguinte enquete feita a um grande
 quantidade de organizações:
 "Qual o melhor Sistema Operacional para uso em servidores?"
 
