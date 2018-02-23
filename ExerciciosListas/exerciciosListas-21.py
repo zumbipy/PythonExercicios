@@ -4,7 +4,8 @@
 #  /___/\_,_/_/_/_/_.__/_/_/   \_, /
 # E-mail: zumbipy@gmail.com   /___//dev - 21/02/2018
 """
-Faça um programa que carregue uma lista com os modelos de cinco carros (exemplo de modelos: FUSCA, GOL, VECTRA etc).
+21 - Faça um programa que carregue uma lista com os modelos de cinco carros
+(exemplo de modelos: FUSCA, GOL, VECTRA etc).
 Carregue uma outra lista com o consumo desses carros, isto é, quantos quilômetros cada um desses carros faz com um
 litro de combustível. Calcule e mostre:
 O modelo do carro mais econômico;
