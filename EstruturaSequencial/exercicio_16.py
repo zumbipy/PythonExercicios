@@ -12,5 +12,7 @@ a quantidades de latas de tinta a serem compradas e o preço total.
 """
 metros_quadrados = int(input("Quantos metros quadrados você quer compra: "))
 total_litros = metros_quadrados * 3
-total_latas = total_litros / 18
-print(total_latas)
+total_latas = round(total_litros / 18)
+valor_paga = total_latas * 80
+print(f"""Você vai gasta {total_litros} litros para {metros_quadrados} metros e vai paga {valor_paga} reais
+em {total_latas} latas de tinta.""")
