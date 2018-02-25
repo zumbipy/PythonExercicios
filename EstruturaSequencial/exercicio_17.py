@@ -15,3 +15,37 @@ comprar apenas galões de 3,6 litros;
 misturar latas e galões, de forma que o preço seja o menor. Acrescente 10% de folga
 e sempre arredonde os valores para cima, isto é, considere latas cheias.
 """
+
+
+def m2_litros(m2):
+    m2 += (m2 * 0.1)
+    return m2 * 6
+
+
+def latas_tintas(litros, lata_galao):
+    total_latas_galao = round((litros / lata_galao) + 0.)
+    return total_latas_galao
+
+
+def pagar_lata_galao(total_latas_galao, valores):
+    return total_latas_galao * valores
+
+
+def media_lata_galao(litros):
+    lata = (litros // 18)
+    galao = round(((litros - (lata * 18)) / 3.6) + 0.5)
+    return lata, galao
+
+
+if __name__ == '__main__':
+    metros = int(input("Digite o tamanho em metros quadrados da área a ser pintada: "))
+    litros = m2_litros(metros)
+
+    lata = latas_tintas(litros, 18)
+    galao = latas_tintas(litros, 3.6)
+    print(f"Comprando {lata} latas de 18 litros vai pagar R$ {pagar_lata_galao(lata, 80):.2f} e vai sobra {abs(lata * 18 - litros):.0f} litros.")
+    print(f"Comprando {galao} galões de 3,6 litros vai pagar R$ {pagar_lata_galao(galao, 25):.2f} e vai sobra {abs(int(galao * 3.6 - litros)):.0f} litros.")
+    lata, galao = media_lata_galao(litros)
+    total_pagar = lata * 80 + galao * 25
+    sobra = litros - (lata * 18 + galao * 3.6)
+    print(f"Comprando {int(lata)} latas e {galao} galões vai paga R$ {total_pagar} reais e vai sobra {abs(sobra):.0f} litros")
