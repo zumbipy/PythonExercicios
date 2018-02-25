@@ -7,5 +7,5 @@
 ----------------------------|:----------------:
 **Estrutura De Decisao** | **27 \ 28**
 **Estrutura De Repeticao** | **44 \ 51**
-**Estrutura Sequencial** | **16 \ 18**
+**Estrutura Sequencial** | **17 \ 18**
 **Exercicios Listas** | **23 \ 24**
