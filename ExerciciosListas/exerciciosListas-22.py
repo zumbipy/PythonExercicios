@@ -29,7 +29,7 @@ Situação                        Quantidade              Percentual
 
 
 def porcentural(lista_defeitos):
-    total_equipamento = len(lista_equipamento)
+    total_equipamento = sum(lista_defeitos)
     lista_porcentagem = []
     for defeito in lista_defeitos:
         if defeito == 0:
@@ -41,17 +41,9 @@ def porcentural(lista_defeitos):
 
 
 def quantidade_tipo_defeitos(lista_equipamento):
-    lista_defeitos = [0, 0, 0, 0]
-    for _, defeito in lista_equipamento:
-        if defeito == 1:
-            lista_defeitos[0] += 1
-        elif defeito == 2:
-            lista_defeitos[1] += 1
-        elif defeito == 3:
-            lista_defeitos[2] += 1
-        else:
-            lista_defeitos[3] += 1
-    return lista_defeitos
+    lista_defeitos = [defeito for _, defeito in lista_equipamento]
+    total_defeitos = [lista_defeitos.count(x) for x in range(1, 5)]
+    return total_defeitos
 
 
 if __name__ == '__main__':
