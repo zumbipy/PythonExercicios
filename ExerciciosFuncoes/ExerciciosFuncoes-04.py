@@ -19,3 +19,5 @@ def somar_imposto(taxa, valor):
 
 
 print(somar_imposto(10, 100))
+
+numero1 = int(input("Digite um numero: "))
