@@ -78,6 +78,7 @@ if __name__ == '__main__':
                    'EstruturaDeRepeticao': {"Falta": 51},
                    'EstruturaSequencial': {"Falta": 18},
                    'ExerciciosListas': {"Falta": 24},
+                   'ExerciciosFuncoes': {"Falta": 13},
                    }
 
     texto = criar_ler_arquivo("texto_readema.txt", tipo="r")
