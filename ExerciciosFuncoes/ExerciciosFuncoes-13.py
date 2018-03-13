@@ -26,9 +26,32 @@ def quadrado_magico():
 
 
 def gira_frente(lista):
+    nada = lista.copy()
     index = [3, 0, 1, 6, 4, 2, 7, 8, 5]
-    lista = [lista[x] for x in index]
-    return lista
+    lista.clear()
+    for p, modifica in enumerate(index):
+        lista.insert(p, nada[modifica])
+
+
+def valida(lista):
+    n_magico = 15
+    a, b, c, d, e, f, g, h, i = lista
+
+    # Valida linhas
+    saida = True if sum([a, b, c]) else False
+    saida = True if sum([d, e, f]) else False
+    saida = True if sum([g, h, i]) else False
+
+    # Validar colunas
+    saida = True if sum([a, d, g]) else False
+    saida = True if sum([b, e, h]) else False
+    saida = True if sum([c, f, i]) else False
+
+    # Validar diagonal
+    saida = True if sum([a, e, i]) else False
+    saida = True if sum([c, e, g]) else False
+
+    return saida
 
 
 def imprimir(lista):
@@ -38,68 +61,20 @@ def imprimir(lista):
 {lista[6]} {lista[7]} {lista[8]}""")
 
 
-def invert_cima_baixo(lista):
-    lista[0], lista[6] = lista[6], lista[0]
-    lista[1], lista[7] = lista[7], lista[1]
-    lista[2], lista[8] = lista[8], lista[2]
-
-
-def invert_direita_esqueda(lista):
-    lista[2], lista[0] = lista[0], lista[2]
-    lista[5], lista[3] = lista[3], lista[5]
-    lista[8], lista[6] = lista[6], lista[8]
-
-
-def valida(lista):
-    n_magico = 15
-    a, b, c, d, e, f, g, h, i = lista
-    if sum([a, b, c]) == n_magico:
-        saida = True
-    else:
-        return False
-
-    if sum([d, e, f]) == n_magico:
-        saida = True
-    else:
-        return False
-
-    if sum([g, h, i]) == n_magico:
-        saida = True
+def ab(lista, p):
+    if p in lista:
+        return True
     else:
         return False
 
 
-    if sum([a, d, g]) == n_magico:
-        saida = True
-    else:
-        return False
-
-    if sum([b, e, h]) == n_magico:
-        saida = True
-    else:
-        return False
-
-    if sum([c, f, i]) == n_magico:
-        saida = True
-    else:
-        return False
-
-
-    if sum([a, e, i]) == n_magico:
-        saida = True
-    else:
-        return False
-
-    if sum([c, e, g]) == n_magico:
-        saida = True
-    else:
-        return False
-
-    return saida
-
-
+lista = []
 a = quadrado_magico()
-if valida(a):
-    print("verdade")
-imprimir(a)
-imprimir(gira_frente(a))
+
+for equivalente in range(100):
+    gira_frente(a)
+    if not ab(lista, a):
+        lista.append(a.copy())
+    
+for mostra in lista:
+    imprimir(mostra)
