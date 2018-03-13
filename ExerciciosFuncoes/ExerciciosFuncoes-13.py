@@ -9,7 +9,7 @@ linhas e colunas, com um número em cada posição e no qual a
 soma das linhas, colunas e diagonais é a mesma. Por exemplo,
 veja um quadrado mágico de lado 3, com números de 1 a 9:
 
-8  3  4 
+8  3  4
 1  5  9
 6  7  2
 
@@ -20,38 +20,86 @@ quando completar cada quadrado. Usar um vetor de 1 a 9 parece
 ser mais simples que usar uma matriz 3x3.
 """
 
-def valida_quadrado_magico(lista_quadrado_magico):
-    soma = sum([lista_quadrado_magico[0], lista_quadrado_magico[1], lista_quadrado_magico[2]])
-    index_adicao = 0
-    saida = 1
-    for valida in range(3):
-        posica1 = lista_quadrado_magico[0 + index_adicao]
-        posica2 = lista_quadrado_magico[1 + index_adicao]
-        posica3 = lista_quadrado_magico[2 + index_adicao]
-        if sum([posica1, posica2, posica3]) == soma:
-            saida += 1
-        index_adicao += 3
-    
-    index_adicao = 0
-    for valida in range(3):
-        posica1 = lista_quadrado_magico[0 + index_adicao]
-        posica2 = lista_quadrado_magico[3 + index_adicao]
-        posica3 = lista_quadrado_magico[6 + index_adicao]
-        if sum([posica1, posica2, posica3]) == soma:
-            saida += 1
-        index_adicao += 1
 
-    if sum([lista_quadrado_magico[0], lista_quadrado_magico[4], lista_quadrado_magico[8]]) == soma:
-        saida += 1
+def quadrado_magico():
+    return [8, 3, 4, 1, 5, 9, 6, 7, 2]
 
-    if sum([lista_quadrado_magico[2], lista_quadrado_magico[4], lista_quadrado_magico[5]]) == soma:
-        saida += 1
+
+def gira_frente(lista):
+    index = [3, 0, 1, 6, 4, 2, 7, 8, 5]
+    lista = [lista[x] for x in index]
+    return lista
+
+
+def imprimir(lista):
+    print(f"""
+{lista[0]} {lista[1]} {lista[2]}
+{lista[3]} {lista[4]} {lista[5]}
+{lista[6]} {lista[7]} {lista[8]}""")
+
+
+def invert_cima_baixo(lista):
+    lista[0], lista[6] = lista[6], lista[0]
+    lista[1], lista[7] = lista[7], lista[1]
+    lista[2], lista[8] = lista[8], lista[2]
+
+
+def invert_direita_esqueda(lista):
+    lista[2], lista[0] = lista[0], lista[2]
+    lista[5], lista[3] = lista[3], lista[5]
+    lista[8], lista[6] = lista[6], lista[8]
+
+
+def valida(lista):
+    n_magico = 15
+    a, b, c, d, e, f, g, h, i = lista
+    if sum([a, b, c]) == n_magico:
+        saida = True
+    else:
+        return False
+
+    if sum([d, e, f]) == n_magico:
+        saida = True
+    else:
+        return False
+
+    if sum([g, h, i]) == n_magico:
+        saida = True
+    else:
+        return False
+
+
+    if sum([a, d, g]) == n_magico:
+        saida = True
+    else:
+        return False
+
+    if sum([b, e, h]) == n_magico:
+        saida = True
+    else:
+        return False
+
+    if sum([c, f, i]) == n_magico:
+        saida = True
+    else:
+        return False
+
+
+    if sum([a, e, i]) == n_magico:
+        saida = True
+    else:
+        return False
+
+    if sum([c, e, g]) == n_magico:
+        saida = True
+    else:
+        return False
 
     return saida
 
 
-lista = [8, 3, 4, 1, 5, 9, 6, 7, 2]
-
-
-print(valida_quadrado_magico(lista))
-
+a = quadrado_magico()
+if valida(a):
+    print("verdade")
+imprimir(a)
+imprimir(gira_frente(a))
