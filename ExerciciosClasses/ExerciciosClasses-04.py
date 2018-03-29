@@ -20,7 +20,7 @@ class Pessoa(object):
         self.peso = peso
         self.altura = altura
 
-    def __repr__py(self):
+    def __repr__(self):
         return f"Nome: {self.nome}\nIdade:{self.idade}\nPeso:{self.peso}\nAltura:{self.altura}"
 
     @staticmethod

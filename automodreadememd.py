@@ -77,7 +77,7 @@ if __name__ == '__main__':
     dict_juntar = {'EstruturaDeDecisao': {"Falta": 28},
                    'EstruturaDeRepeticao': {"Falta": 51},
                    'EstruturaSequencial': {"Falta": 18},
-                   "Exercicios Classes": {"Falta": 17},
+                   "ExerciciosClasses": {"Falta": 17},
                    'ExerciciosListas': {"Falta": 24},
                    'ExerciciosFuncoes': {"Falta": 13},
                    }

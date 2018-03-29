@@ -19,39 +19,36 @@ produza todas as combinações possíveis e verifique a soma
 quando completar cada quadrado. Usar um vetor de 1 a 9 parece
 ser mais simples que usar uma matriz 3x3.
 """
+import random
 
 
 def quadrado_magico():
     return [8, 3, 4, 1, 5, 9, 6, 7, 2]
 
 
-def gira_frente(lista):
-    nada = lista.copy()
-    index = [3, 0, 1, 6, 4, 2, 7, 8, 5]
-    lista.clear()
-    for p, modifica in enumerate(index):
-        lista.insert(p, nada[modifica])
-
-
 def valida(lista):
-    n_magico = 15
+    N_MAGICO = 15
+    saida = 0
     a, b, c, d, e, f, g, h, i = lista
 
     # Valida linhas
-    saida = True if sum([a, b, c]) else False
-    saida = True if sum([d, e, f]) else False
-    saida = True if sum([g, h, i]) else False
+    saida += 1 if sum([d, e, f]) == N_MAGICO else 0
+    saida += 1 if sum([a, b, c]) == N_MAGICO else 0
+    saida += 1 if sum([g, h, i]) == N_MAGICO else 0
 
     # Validar colunas
-    saida = True if sum([a, d, g]) else False
-    saida = True if sum([b, e, h]) else False
-    saida = True if sum([c, f, i]) else False
+    saida += 1 if sum([a, d, g]) == N_MAGICO else 0
+    saida += 1 if sum([b, e, h]) == N_MAGICO else 0
+    saida += 1 if sum([c, f, i]) == N_MAGICO else 0
 
     # Validar diagonal
-    saida = True if sum([a, e, i]) else False
-    saida = True if sum([c, e, g]) else False
+    saida += 1 if sum([a, e, i]) == N_MAGICO else 0
+    saida += 1 if sum([c, e, g]) == N_MAGICO else 0
 
-    return saida
+    if saida == 8:
+        return True
+    else:
+        return False
 
 
 def imprimir(lista):
@@ -61,20 +58,24 @@ def imprimir(lista):
 {lista[6]} {lista[7]} {lista[8]}""")
 
 
-def ab(lista, p):
-    if p in lista:
+def remove_repetido(lista_final, lista_normal):
+    if lista_normal in lista_final:
         return True
     else:
         return False
 
 
-lista = []
-a = quadrado_magico()
+lista_final = []
+lista_quadrado_magico = [1, 2, 3, 4, 6, 7, 8, 9]
 
-for equivalente in range(100):
-    gira_frente(a)
-    if not ab(lista, a):
-        lista.append(a.copy())
-    
-for mostra in lista:
+for equivalente in range(1000000):
+
+    random.shuffle(lista_quadrado_magico)
+    lista_quadrado_magico.insert(4, 5)
+
+    if not remove_repetido(lista_final, lista_quadrado_magico) and valida(lista_quadrado_magico):
+        lista_final.append(lista_quadrado_magico.copy())
+    lista_quadrado_magico.remove(5)
+
+for mostra in lista_final:
     imprimir(mostra)
