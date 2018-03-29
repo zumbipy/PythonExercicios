@@ -17,21 +17,21 @@ class TV(object):
     def __init__(self):
         self.volume = 0
         self.canal = 0
-    
+
     def aumentar(self):
         if self.volume == 100:
             return "Max"
         else:
             self.volume += 1
             return self.volume
-    
+
     def diminuir(self):
         if self.volume == 0:
             return "Min"
         else:
             self.volume -= 1
             return self.volume
-    
+
     def canal_mais(self):
         if self.canal == 150:
             self.canal = 1
@@ -39,7 +39,7 @@ class TV(object):
         else:
             self.canal += 1
             return self.canal
-            
+
     def canal_menos(self):
         if self.canal <= 1:
             self.canal = 150
@@ -48,5 +48,5 @@ class TV(object):
             self.canal -= 1
             return self.canal
 
-tv = TV()
 
+tv = TV()
