@@ -70,7 +70,7 @@ Humor: {self.humor()}"""
         print(hhumor)
         if hhumor <= 25:
             return "Triste"
-        elif hhumor <= 50 :
+        elif hhumor <= 50:
             return "Normal"
         elif hhumor <= 75:
             return "Feliz"
