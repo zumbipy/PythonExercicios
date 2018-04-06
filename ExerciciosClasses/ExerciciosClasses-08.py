@@ -18,7 +18,7 @@ class Macaco(object):
         self.estomago = estomago
 
     def __repr__(self):
-        return f"Nome: {self.nome}\nEstomago: {self.estomago}"
+        return print(f"Nome: {self.nome}\nEstomago: {self.estomago}")
 
     def comer(self, comida):
         dict_comida = {"banana": 100, "maça": 50, "formiga": 10}
