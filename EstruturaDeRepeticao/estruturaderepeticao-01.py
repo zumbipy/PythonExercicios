@@ -20,9 +20,8 @@ nota = int(input("Digite uma nota entre 0 e 10: "))
 # Loop com While
 
 while True:
-    if nota >= 0 and nota <= 11:
+    if nota >= 0 and nota < 11:
         print("Valor Válido!")
         break
-    else:
-        print("Valor inválido")
-        nota = int(input("Digite uma nota entre 0 e 10: "))
+    print("Valor inválido")
+    nota = int(input("Digite uma nota entre 0 e 10: "))

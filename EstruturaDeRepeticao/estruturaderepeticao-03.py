@@ -68,3 +68,4 @@ while True:
     else:
         print("!!!ERRO!!! Valor Inválido")
         estado_civil = input("Qual seu estado civil (S), (C), (V), (D): ")
+    
