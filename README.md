@@ -14,6 +14,7 @@
     <th>Concluido</th> 
   </tr>
   
+  
 <tr>
     <td> Estrutura De Decisao</td>
     <td>27 | 28</td> 
@@ -43,5 +44,6 @@
     <td> Exercicios Listas</td>
     <td>23 | 24</td> 
 </tr>
+        
         
 </table>
