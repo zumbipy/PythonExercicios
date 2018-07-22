@@ -4,7 +4,7 @@
 #  /___/\_,_/_/_/_/_.__/_/_/   \_, /
 # E-mail: zumbipy@gmail.com   /___/
 '''
-    Este aquivo ler os nomes do diretorio Raiz do local onde esta e criar um html com
+    Este aquivo ler os nomes das pastas do diretorio Raiz onde esta e criar um aqruivo com
 o NomeDapasta e TotaldeArquivos dentro dela.
 
 '''
